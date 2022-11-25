@@ -2,7 +2,7 @@ FROM richarvey/nginx-php-fpm:1.5.3
 
 LABEL maintainer="auchri <auer.chrisi@gmx.net>"
 
-ARG MATOMO_VERSION=3.10.0
+ARG MATOMO_VERSION=4.10.1
 ARG WEBROOT=/var/www/html
 ARG MATOMO_PATH=${WEBROOT}
 ARG GEOIP_PATH=${MATOMO_PATH}/misc/
@@ -30,4 +30,4 @@ RUN mkdir -p ${MATOMO_PATH} && cd ${MATOMO_PATH} && \
 #    gunzip -c ${GEOIP_FILE_NAME_GZ} > ${GEOIP_FILE} && \
 #    rm -f ${GEOIP_FILE_NAME_GZ}
 
-EXPOSE 80
+EXPOSE 8080
