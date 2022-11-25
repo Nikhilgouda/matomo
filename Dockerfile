@@ -30,4 +30,6 @@ RUN mkdir -p ${MATOMO_PATH} && cd ${MATOMO_PATH} && \
 #    gunzip -c ${GEOIP_FILE_NAME_GZ} > ${GEOIP_FILE} && \
 #    rm -f ${GEOIP_FILE_NAME_GZ}
 
+ENTRYPOINT ["/apache.sh"]
+
 EXPOSE 8080
